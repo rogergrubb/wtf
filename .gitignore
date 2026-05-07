@@ -1,0 +1,19 @@
+# Secrets
+*_key.txt
+*.env
+.env
+*token*.txt
+
+# Working dirs
+/tmp/
+__pycache__/
+*.pyc
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Internal setup scripts (token-bearing)
+.git_setup.py
+.git_push.py
