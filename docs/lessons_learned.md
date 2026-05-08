@@ -276,4 +276,56 @@ Mastermind insight (late May 7): the 1969 photograph contains THREE custom Chara
 Brand film moment unlocked:
 > Cold open ends → dissolve to AUG 69 photo → hold one beat → the photograph MOVES → Mom turns to camera → speaks in her own voice (or Aurora/Skye preset) → *"He was my Number One Son. And my only son. Ha ha ha."* → photo freezes → cut to rest of Act 1.
 
-Production pipeline (Friday morning
+Production pipeline (Friday morning, ~60 minutes total, ~$1.00 cost):
+1. Crop AUG 69 photo (685×621) to tight Mom-Roger composition (sister excluded by crop, OR removed via gen4_aleph if a wider frame is needed)
+2. Refine each crop via gen4_image with reference + prompt for clarity/upscale (~5 cr × 2)
+3. Create two custom avatars via avatars.create with personalities + voices:
+   - **Mom-25** → Aurora (Calm) or Skye (Soft); 1960s-mother personality
+   - **Roger-5** → Max or Felix child-coded preset; precocious five-year-old
+4. Generate avatar_videos delivering brand-film lines (~7-15 cr each)
+5. Composite into Act 1 between cold-open and hospital photo
+
+This is the *single most powerful* creative moment available to us. Mean Joe Greene-grade. No other team can ship it because no other team has the photograph + the mother + the agency + the technical chops simultaneously.
+
+### THE SUBMISSION SHAPE — locked May 8 night
+After discovering Video Meeting (multi-character scenes) and Camera/Screen Sharing (characters watching user uploads), the submission collapses into a continuous emotional experience:
+
+**Demo link → numberonesonsoftware.com/wtf:**
+- `<AvatarCall>` widget loads on page open
+- Mom-at-25 (custom character from cropped AUG 69 photo) is visible on beach
+- Starting script: *"Hi. I'm Roger's mother. He just built something I want to show you. Upload a photo of someone you loved, and watch what the camera missed."*
+- User uploads any photo
+- Mom *watches them upload it* via Camera/Screen Sharing capability
+- Ghost Frames pipeline fires (gen4_image → gen4.5) generating 10-30 seconds of motion before/after
+- Mom reacts to what she sees: *"That's beautiful. Let's see if she'll come back for a moment."* (knowledge-base grounded with Number One Son founding philosophy)
+- The experience runs end-to-end without user leaving the submission page
+
+**Video link → brand film (existing treatment):**
+- Cold open mother story → Act 1 lifetime + photo bookends → Act 2 craftsman's blade demonstration replaced with Ghost Frames live demo on Mom's own photo → Act 3 anyone can be a builder → real Roger to Cris
+
+**Written description → README of github.com/rogergrubb/wtf:**
+- Project objective in 1-2 paragraphs
+- API surfaces enumerated (gen4_image, gen4.5, gen4_aleph, gwm1_avatars custom + preset, eleven_text_to_sound_v2, voice cloning, knowledge-base documents, video-meeting multi-character, camera/screen sharing)
+- Architecture diagram showing the avatars-react SDK + Modal infra + custom Skills shipped
+- Builders Program partnership ask repeated, named, specific
+
+The three pieces share one emotional arc: brand film tells the story, deployed app delivers the experience, README delivers the receipts. Cris doesn't watch the film and decide to email us — he USES the app, has a real moment, and the closing shot of Roger speaking to him lands as the natural follow-up.
+
+Friday production order: 1) Custom characters (Mom/Roger/sister), 2) Knowledge base grounding, 3) Ghost Frames pipeline, 4) avatars-react frontend with screen-sharing wired, 5) brand film with embedded Ghost Frames demo of Mom's own photo, 6) closing shot integration, 7) deploy. Eight to twelve hours of build, $5-10 in Runway credits.
+
+### Cost reality
+- gen4_image (text-to-image): 5 credits ($0.05) per generation, ~26 sec runtime.
+- gen4.5 video (5 sec): 60 credits ($0.60) per generation, ~60-90 sec runtime.
+- gen4_aleph editing pass: ~75 credits ($0.75) per generation observed, ~60 sec runtime.
+- gwm1_avatars (Characters video): ~7 credits per generation observed, but variable; some longer text increased cost.
+- eleven_text_to_sound_v2 (sound effect): ~3 credits per generation.
+- avatars.create + portrait: 5 credits for portrait + ~free for avatar setup.
+- Total burn for the entire dry-run + real-API test + 9-avatar render + composition: ~$2.30 of $10 budget.
+
+### Consent-respect note — sister cropped out (May 7 night, Mastermind directive)
+Mastermind made the call: he has not gotten his sister's permission to use her image in a commercial submission, so the AUG 69 photo gets **cropped to just Mom-25 + young-Roger** before any avatar work. Sister is removed from the source PNG used for character generation and from the brand-film cuts that show the photo.
+
+**Why this matters strategically (cofounder note):**
+- Same logic that made me push back on using Cris's family photos applies inward to Roger's own family. Consent isn't a gate that only protects strangers.
+- The narrative actually gets *cleaner*: "Number One Son" is literally a two-person scene now — the woman who said the words, the boy who heard them. Tighter framing, stronger emotional read.
+- Submission rules (Section 7.3.2) and Runway's content moderation policies are upheld without ambigui
