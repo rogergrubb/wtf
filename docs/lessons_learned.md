@@ -248,4 +248,32 @@ The dev.runwayml.com Characters management page exposes 4 tabs: Characters, Expl
 
 **Characters tab:** lists custom characters created via avatars.create. Roger's `WTF Test Mastermind` (May 6) is still in the account, reusable Friday. Banner notice: *"Characters can now invoke tools during conversations"* — agentic tool-use is supported, characters can take actions not just speak.
 
-**Knowledge tab:** Documents endpoint UI. Empty by default. Two ways to populate: "Add Text" (paste content) or "Upload Files". This grounds characters in subject-matter 
+**Knowledge tab:** Documents endpoint UI. Empty by default. Two ways to populate: "Add Text" (paste content) or "Upload Files". This grounds characters in subject-matter knowledge. *Use case for Number One Son:* load the founder bio + Number One Son origin philosophy so a Mastermind character can reference real lifetime events when speaking with users.
+
+**Preset character page anatomy (Sofia / fashion-designer example):**
+- Character ID — preset_id (e.g., `fashion-designer`) confirms the 9 official presets we already documented
+- Character image — high-quality face/body shot (Asian woman in atelier, full visible face)
+- Character Voice — voice preset_id with personality trait descriptor: **Summer (Breezy)**
+- Personality — ~100-word verbose description: role + expertise + speaking style + vocal trait
+- Starting script — the opening line the avatar delivers when session starts
+- Three actions exposed: Start chat (test live), React SDK (frontend embed), Start Building (dev entry)
+
+**Voice preset trait descriptors confirmed so far:**
+- Marcus → Firm
+- Summer → Breezy
+- (more to be discovered as we explore)
+
+### Consent-respect note — sister cropped out (May 8 night decision)
+Mastermind reviewed the brand-film plan and made the right call: he has NOT gotten explicit permission from his sister to use her likeness for AI avatar generation. Therefore the AUG 69 photograph is cropped to ONLY Mom-25 + Roger-5 for character creation. The sister stays in the original photograph that appears as a still in Act 1, but is NOT used as a custom character.
+
+The narrower 2-character composition is actually MORE on-thesis: *the Number One Son and his mother*. Just the two of them. The frame's emotional center is the relationship the joke ("you're my number one son... and my only son") describes. Three people made the joke implicit; two people make it explicit.
+
+This is also exactly the consent-care precedent we'd want Cris to see — even within his own family Roger exercises judgment. That's the kind of builder Runway wants in their Builders Program.
+
+### Two custom Characters from AUG 69 photo — production plan locked
+Mastermind insight (late May 7): the 1969 photograph contains THREE custom Characters waiting to be born — Mom-at-25, Roger-at-5, sister-at-3. All three brought back as conversational avatars who can speak in the brand film.
+
+Brand film moment unlocked:
+> Cold open ends → dissolve to AUG 69 photo → hold one beat → the photograph MOVES → Mom turns to camera → speaks in her own voice (or Aurora/Skye preset) → *"He was my Number One Son. And my only son. Ha ha ha."* → photo freezes → cut to rest of Act 1.
+
+Production pipeline (Friday morning
