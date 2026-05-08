@@ -928,3 +928,68 @@ Test Nano Banana Pro directly in the Dev Portal API testing UI before writing an
 6. Run. Verify output.
 
 If output looks good, we know the model works. Then we move to writing Python orchestration code that does the same thing programmatically.
+
+
+### MAJOR PIVOT — back to Clone Army positioning (May 8, ~11am, Mastermind decision)
+
+**Mastermind directive: scrap the emotional brand-film route. Go back to demonstrating what a solopreneur orchestrating a clone army can do using all the Runway API tools.**
+
+**Honest cofounder note: this is the right call.** Roger watched the Veo 3.1 take 4 (Mom-25 saying "My Number One Son") and reported: *"I kind of cringe seeing an odd version of myself and my mother talking. This is not what I know, this is not what I want to see."* When the founder himself cringes at the output, the audience will too. The uncanny valley is real and we've crossed it.
+
+**Why the pivot is strategically right:**
+
+1. **Differentiation.** Hundreds of teams will submit 2-3 minute emotional shorts. Maybe five will submit working solopreneur-orchestrating-AI-army demos. The competitive moat shifts from "best emotional story" (saturated) to "best demonstration of platform capability" (open lane).
+
+2. **Authenticity.** Roger is a journeyman carpenter turned solo dev. His native medium is BUILDING things, not telling tearjerker stories. The clone army positioning is who he actually is. The mother-son angle was a layer on top that didn't quite fit.
+
+3. **Hackathon rubric alignment.** The judging criteria are Concept / Craft / Emotional Resonance / Adherence to Brief. A clone army demo can hit all four:
+   - Concept: solopreneur scales infinitely via Runway API
+   - Craft: real working orchestration of multiple endpoints in real time
+   - Emotional Resonance: the underdog founder vs the unfair AI advantage — relatable, aspirational
+   - Adherence to Brief: uses literally every API endpoint they offer
+
+4. **What we already have.** We already invested in the clone army concept earlier in this session before the brand-film pivot. The 51-facet roster, the chain-of-command sketch, the dress rehearsal video — all already in the repo. We're not starting from zero. We're returning to a layer of work we already did.
+
+**What stays from earlier work:**
+- All cinematic prompt research (still applies to whatever we render)
+- Runway model arsenal — gen4.5, gen4_aleph, Veo 3.1, Seedance 2.0, Nano Banana Pro, eleven sound/voice, characters
+- ghostframes.app domain (held in reserve, could pivot to a feature within the army or a separate sub-product)
+- Roger's brand: Number One Son Software Development
+- 4 takes of Mom + Roger video already generated — preserved as reference of what we tried
+
+**What changes:**
+- The submission VIDEO concept: solopreneur + clone army demo
+- The submission PRODUCT: a clone-army orchestration tool (working name TBD — could keep ghostframes.app, could pivot to clonearmy.app or similar)
+- The emotional anchor: "watch one founder do the work of fifty" — David vs Goliath, builder vs slop economy
+- Real-Roger-on-camera stays as the closing shot if we want it (TBD)
+
+**Drops from prior brand-film work:**
+- Mom-25 + Roger-5 dialogue scene as the keystone (the takes are preserved as reference, not deployed)
+- "My Number One Son" emotional callback as the film's spine
+- Photograph-activates-and-deactivates structural device
+- Cris-direct closing line (still optional, may relocate)
+
+**The clone army submission, sketched:**
+
+What the audience sees in 2-3 minutes:
+1. **Open (10s):** Roger alone at a workstation. One human, one keyboard. "I'm a solopreneur. I'm 62. I have an idea bigger than I am."
+2. **The army wakes up (30s):** On the screen behind him, dozens of AI characters/clones spawn into existence — each labeled with a Runway endpoint they're using (gen4.5 generating shots, Veo 3.1 doing dialogue, character_performance lip-syncing, eleven sound effects, Nano Banana Pro creating assets, gen4_aleph polishing, kling animating, Seedance choreographing). The army has a CHAIN OF COMMAND.
+3. **Real-time orchestration (60s):** The clones are visibly doing work in parallel — multiple Runway API calls firing simultaneously, outputs appearing in real time. Roger conducts. The army renders. Each endpoint earns its on-screen moment because each clone is OPERATING it.
+4. **The output (20s):** What the army built. A finished cinematic something — could be a brand video, a product demo, a real estate ad, a memorial film. The point is: the army made it in MINUTES, with ONE human conducting.
+5. **Close (10s):** Roger on camera (real). "This is what one solopreneur with Runway looks like. We built the platform that builds the platform. Number One Son Software Development. Cris — let's talk."
+
+**Why this version wins:**
+- Cris's company built the Runway API. We're showing him what HIS platform makes possible in the hands of a single builder.
+- The tools showcase ITSELF is the differentiation. No other team will demonstrate so many endpoints in concert.
+- Roger doesn't have to be a great actor or a great storyteller — he just has to be a great BUILDER, which he is.
+- The visual is genuinely novel: a control room showing dozens of AI characters doing real work simultaneously.
+- The emotional resonance is "the human who built this is one human" — that's Cris's gut.
+
+**Tasking impact:**
+- All the Mom-25 + Roger-5 work — ARCHIVED as reference, not deployed.
+- New film concept: clone army orchestration demo.
+- v3 product launch film structure — DEPRECATED. Replaced by clone army demo film.
+- Task #49 (Build the central scene Mom-Roger dialogue) — completed in the sense that we tested and rejected it.
+- New direction work: design the on-screen "war room" / "army control center" visual treatment, finalize which Runway endpoints get featured clones, write the orchestration narrative.
+
+**Mastermind authored. Locked direction.**
