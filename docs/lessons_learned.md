@@ -759,3 +759,43 @@ This is the right discipline: optional emotional elements should be added LAST, 
 - Real Roger closing-shot recording (Saturday PM) becomes OPTIONAL until decision made.
 - If he records it as planned, we have the asset if we choose option (a). If we don't choose (a), the recording becomes raw material for option (c) or for v2 marketing content.
 - Recording it costs ~10 minutes of Roger's time and produces optionality. Recommendation: still record it. Decide later whether to use it.
+
+
+### Runway Workflows research synthesis (May 8, 9:30am — hackathon kickoff intel)
+
+Mastermind on the live Runway hackathon kickoff Zoom call shared screenshots of presenters demonstrating **Workflows** — Runway's visual node-based pipeline builder. Critical strategic intel for our build. 4 parallel research agents synthesized full deep-dive at `docs/runway_workflows_playbook.md`.
+
+**Top-line findings:**
+
+1. **Workflows is a real production tool, available Standard plan ($12/mo)+, NOT enterprise-only.** Launched October 2025. Visual node graph + one-click Publish to API endpoint.
+
+2. **Publishing creates a real callable REST endpoint.** `POST /v1/workflows/{id}` accepts dynamic user inputs at call-time. This means we CAN build Ghost Frames SaaS backend on top of Workflows if we want.
+
+3. **Pricing = sum of node credits, no workflow tax.** ~$1.80 per Ghost Frames user video at the proposed pipeline (Nano Banana Pro + gen4.5 + gen4_aleph). Utility nodes (Stitch, Trim, etc.) are free.
+
+4. **Limitations matter at scale:** no conditional branching, no automatic retries, no caching, no webhook support below Enterprise. Workflows ship fast but you outgrow them under production traffic.
+
+**Strategic decision tree (locked):**
+
+- **Hackathon demo (this weekend):** Publish a Workflow endpoint. Ship Ghost Frames SaaS v1 in 4-8 hours of build. ~25 hours saved vs custom Modal orchestration.
+- **Production SaaS (week 2+):** Migrate to Modal Python backend with caching, conditional retry, rate limiting. Workflows lacks the flexibility for production traffic.
+- **Film production (this weekend):** Use Workflows internally as a build tool for iterating the central Mom-25 + Roger-5 scene. Don't publish; just use the visual graph to speed up iteration.
+
+**Model decisions:**
+
+- **Character reference sheets (Mom-25, Roger-5 from cropped AUG 69 photo): NANO BANANA PRO** (Google Gemini 3 Pro Image). 95%+ identity consistency across 14 reference variations, native 4K, $0.067/image with batch discount, softer output for clean handoff to gen4.5 image-to-video. Runway model ID: `gemini_image3_pro`.
+
+- **22-second dialogue scene: gen4.5 + character_performance PRIMARY, Seedance 2.0 FALLBACK.** gen4.5+character_performance is purpose-built for tender emotional dialogue and battle-tested. Seedance 2.0 (ByteDance, model ID `bytedance/seedance-2-0`) supports multi-character lip-sync with @Audio1 reference syntax but is newer and less proven for our specific tender mother-son scene. Test both Saturday afternoon, lock the winner.
+
+- **Polish pass: gen4_aleph** unchanged — applies after the gen4.5 or Seedance output to unify color grade and add film grain.
+
+**Tasking impact:**
+
+- New canonical doc at `docs/runway_workflows_playbook.md` (~1500 words)
+- Friday: Spike Workflows access (does Roger's plan have it? Can he click Publish?). Time-boxed to 30 minutes.
+- Saturday morning: Build Mom-25 + Roger-5 character sheets via Nano Banana Pro. ~20 minutes work.
+- Saturday afternoon: Build the central scene workflow (test gen4.5+character_performance vs Seedance 2.0). ~2 hours.
+- Sunday morning: Publish workflow as API endpoint, wire to Next.js frontend. ~3 hours.
+- Sunday afternoon: Polish + brand film + README + submit.
+
+**The hackathon kickoff was the highest-value 30 minutes of the weekend.** Workflows changes the SaaS backend math by saving ~20 hours of orchestration code. Without this intel we would have built custom Modal pipelines from scratch.
