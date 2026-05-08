@@ -243,11 +243,9 @@ Production specs:
 
 This shot is the North Star of the whole film. Every prior beat exists to build emotional tension that releases on these seven words.
 
-### Cost reality
-- gen4_image (text-to-image): 5 credits ($0.05) per generation, ~26 sec runtime.
-- gen4.5 video (5 sec): 60 credits ($0.60) per generation, ~60-90 sec runtime.
-- gen4_aleph editing pass: ~75 credits ($0.75) per generation observed, ~60 sec runtime.
-- gwm1_avatars (Characters video): ~7 credits per generation observed, but variable; some longer text increased cost.
-- eleven_text_to_sound_v2 (sound effect): ~3 credits per generation.
-- avatars.create + portrait: 5 credits for portrait + ~free for avatar setup.
-- Total burn for the entire dry-run + real-API test + 9-avatar render + composition: ~$2.30 of $10 budget.
+### Runway dev portal Characters UI — recon (May 7 night)
+The dev.runwayml.com Characters management page exposes 4 tabs: Characters, Explore, Knowledge, Usage.
+
+**Characters tab:** lists custom characters created via avatars.create. Roger's `WTF Test Mastermind` (May 6) is still in the account, reusable Friday. Banner notice: *"Characters can now invoke tools during conversations"* — agentic tool-use is supported, characters can take actions not just speak.
+
+**Knowledge tab:** Documents endpoint UI. Empty by default. Two ways to populate: "Add Text" (paste content) or "Upload Files". This grounds characters in subject-matter 
