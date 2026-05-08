@@ -1,0 +1,14 @@
+{
+  "task_id": "6d148a4e-8782-4462-a9cc-14c165df6d65",
+  "model": "veo3.1",
+  "duration": 8,
+  "ratio": "1280:720",
+  "prompt_image": "https://raw.githubusercontent.com/rogergrubb/wtf/main/assets/photos/1969_mom25_roger5_LOCKED.png",
+  "iteration_note": "Take 4: Veo 3.1 — single-call generation with video + synced audio + lip-synced dialogue + ambient sound. The 'My Number One Son' line baked into the prompt for native lip-sync. AI-chosen voice (will swap in Mom-at-82 cloned voice via character_performance later).",
+  "prompt_text": "A 35-year-old mother and her 5-year-old son share a tender moment on Johnson's Beach at the Russian River, August 1969. The mother smiles down at her son and says softly with quiet maternal warmth: 'My Number One Son.' The boy nuzzles into her shoulder, breaks into a soft giggle. Wind moves their hair. Sunlight catches the rainbow umbrella. Camera slowly pulls back. Cinematic Kodachrome 1969 aesthetic, warm tones, ambient river sounds and gentle breeze.",
+  "credits_spent": 320,
+  "credits_remaining_after": 49725,
+  "result_size_mb": 4.02,
+  "audio_baked_in": true,
+  "comparison_note": "FIRST take with audio + lip-synced dialogue baked in. Compare to gen4.5 takes 1-3 which were silent visual only. If Veo's voice character + lip-sync is acceptable, this could be the keystone clip; if Mom-at-82 voice clone is preferred, swap audio via character_performance Saturday."
+}
