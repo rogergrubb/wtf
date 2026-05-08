@@ -1,0 +1,14 @@
+{
+  "task_id": "aeb1eb40-b262-461a-8023-1269b4ce514c",
+  "model": "gen4.5",
+  "duration": 10,
+  "ratio": "1280:720",
+  "prompt_image": "https://raw.githubusercontent.com/rogergrubb/wtf/main/assets/photos/1969_mom25_roger5_LOCKED.png",
+  "prompt_text": "Locked camera in a tight medium shot. The mother turns slightly toward her son and smiles down warmly. The boy looks up at her with a soft giggle, leans into her arm. Wind moves their hair. Sunlight catches the rainbow umbrella. [00:00] Both still. [00:02] Mom turns toward son. [00:04] Boy looks up, eyes meet. [00:06] Boy giggles, leans in. [00:08] Both settle, smiling at each other.",
+  "credits_spent": 222,
+  "cost_usd": 2.22,
+  "credits_remaining_after": 50285,
+  "result_size_mb": 3.95,
+  "submitted_at": "2026-05-08T~10:35Z",
+  "completed_at": "2026-05-08T~10:37Z"
+}
