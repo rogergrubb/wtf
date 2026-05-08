@@ -851,3 +851,80 @@ Mastermind completed the App↔Dev account connection. The prerequisite is satis
 5. **Lock the character refs.** Save URLs/asset IDs for both characters. They become inputs to the dialogue scene workflow.
 
 This is task #66 (now in_progress). Foundation for everything downstream.
+
+
+### PIVOT — Skip Workflows app, work directly in Dev Portal (May 8, ~10:15am, Mastermind decision)
+
+**Mastermind directive: forget the Workflows app, just work in the dev account.**
+
+This pivot reverts the SaaS backend strategy from "published Workflow + Next.js frontend" back to the original "custom Python orchestration + Modal backend" plan that we held before the kickoff Workflows reveal.
+
+**What stays unchanged:**
+- All cinematic prompts (cinematic_prompt_playbook.md, open_shot_prompts.md)
+- Model decisions: Nano Banana Pro for character refs, gen4.5 + character_performance for dialogue, gen4_aleph for polish
+- Master Style Prompt
+- v3 film structure (~44s product launch film)
+- Mom voice capture plan
+- Ghost Frames product positioning
+- ghostframes.app domain target
+- Brand and emotional thesis
+
+**What changes:**
+- SaaS backend: Modal Python orchestration (was: published Runway Workflow)
+- Build time estimate: 12-16 hours (was: 4-8 hours via Workflow)
+- Trade-off: full control gained (conditional branching, retries, caching, error handling) at cost of more code
+- Tooling surface for Mastermind: Dev Portal API testing UI + Python SDK + Cursor/VS Code (was: Workflow visual builder + Publish button)
+
+**Why this is the right call:**
+
+The Workflows app is a thin abstraction. For a hackathon-stage SaaS that we want to control, debug, and extend post-hackathon, direct API calls give us the flexibility we'd outgrow Workflows for anyway. We were already planning to migrate from Workflows to Modal in Week 2 of production — Mastermind just collapsed that two-step migration into one move.
+
+**Direct API orchestration sequence for Ghost Frames v1:**
+
+```python
+from runwayml import RunwayML
+client = RunwayML()  # uses RUNWAYML_API_SECRET env var
+
+# Step 1 — Generate character reference sheet via Nano Banana Pro
+char_sheet = client.text_to_image.create(
+    model='gemini_image3_pro',
+    prompt='[character description + 6-pose brief]',
+    reference_images=[uploaded_photo_uri],
+).wait_for_task_output()
+
+# Step 2 — Generate dialogue scene via gen4.5 + character_performance
+dialogue_scene = client.image_to_video.create(
+    model='gen4.5',
+    prompt_image=char_sheet.output[0],  # use one of the char refs as first frame
+    prompt_text='[dialogue scene prompt]',
+    duration=10,
+).wait_for_task_output()
+
+# Step 3 — Polish via gen4_aleph
+polished = client.video_to_video.create(
+    model='gen4_aleph',
+    prompt_video=dialogue_scene.output,
+    prompt_text='[Master Style Prompt + transformation language]',
+).wait_for_task_output()
+
+return polished.output  # final video URL
+```
+
+**Tasking impact:**
+- #65 (Spike Workflows access) — completed (we did the spike, decided not to use)
+- #68 (Build SaaS via Workflow) — DELETED (superseded)
+- New task: build SaaS via direct API + Modal
+- #66 (Build character refs via Nano Banana Pro) — proceeds, but via Dev Portal API testing UI or direct Python script, NOT through Workflows app
+- #38 (Modal account setup) — re-elevated to active priority
+
+**Immediate next action:**
+
+Test Nano Banana Pro directly in the Dev Portal API testing UI before writing any code:
+1. Open dev.runwayml.com
+2. Navigate to text-to-image testing UI (which we already saw at dev.runwayml.com/v1/text_to_image)
+3. Select model: gemini_image3_pro (Nano Banana Pro)
+4. Upload cropped 1969 photo as reference
+5. Paste character-sheet prompt for Mom-25
+6. Run. Verify output.
+
+If output looks good, we know the model works. Then we move to writing Python orchestration code that does the same thing programmatically.
