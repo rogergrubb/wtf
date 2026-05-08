@@ -424,3 +424,93 @@ Mom's voice during the open shot. Three options:
 - (c) **Voiceover from present-day Mom** — clone of his actual mother (alive at 82) via eleven_multilingual_v2 + voice cloning, saying *"He was my Number One Son."* The visual is 1969 but the voice is 2026 — narrating from the future, looking at the moment as it was. Recursion compounds.
 
 Option (c) is the strongest narratively but most expensive emotionally and credit-wise. Decision deferred to Friday morning huddle.
+
+
+### THE FLAWLESS MANDATE — open shot gets full Runway capacity (Mastermind, May 8 dawn)
+
+**Mastermind directive: the open shot is the keystone of the entire submission. Use the full capacity, tech, and power of all Runway tools. No expense spared. The first scene must be flawless.**
+
+This is correct. The first 5–7 seconds determine whether Cris stays for the next 115. The keystone gets premium treatment; lower-priority beats can run leaner.
+
+**Quality budget allocation (of 50,507 credit balance):**
+| Beat | % of budget | Approx credits | Approx $ |
+|---|---|---|---|
+| Open shot (the keystone) | 30% | ~3,500 cr | ~$35 |
+| Act 1 photo bookends | 15% | ~1,800 cr | ~$18 |
+| Act 2 reverse-peel beats (9 × ~200 cr each) | 35% | ~4,000 cr | ~$40 |
+| Closing shot integration | 10% | ~1,200 cr | ~$12 |
+| Buffer / re-rolls / surprises | 10% | ~1,200 cr | ~$12 |
+| **Total film budget** | 100% | **~11,700 cr** | **~$117** |
+
+**Net: we burn ~25% of our credits on the film and keep 75% for the deployed app demo + post-judging follow-up content. Credits do not constrain quality.**
+
+**The open-shot iteration loop (no shortcuts):**
+
+For each layer of the open shot composition, we iterate:
+1. Generate 5–7 candidates with varied prompts.
+2. Visual A/B compare side-by-side.
+3. Pick the best. Re-roll the rejected with refined prompts.
+4. Run gen4_aleph at least 3 quality passes on the final composite (cinematic color, motion polish, micro-detail enhancement).
+5. Final composite reviewed full-screen on Mastermind's monitor before locking.
+
+**Per-layer credit allocation inside the open shot:**
+- Background plate (Russian River, kids splashing, golden hour): gen4_image ×7 attempts (~35 cr) → gen4.5 motion on best ×3 attempts (~180 cr).
+- Phone bezel + screen frame: gen4_image ×5 attempts (~25 cr).
+- Roger-5 inside the phone screen: avatars.create + avatar_videos.create ×5 takes (~150 cr) + character_performance polish (~150 cr).
+- Mom-25 over-the-shoulder pose with phone: avatars.create + avatar_videos.create ×5 takes (~150 cr) — hardest layer; she's back-to-camera holding a 2026 phone in 1969.
+- eleven_text_to_sound_v2 ambient (surf, kids, shutter): ×5 attempts each layer (~75 cr).
+- gen4_aleph master polish on final composite: 4 passes (~300 cr).
+- Quality re-rolls + experiments: ~1500 cr buffer.
+
+**Quality bar — "flawless" definition for the open shot:**
+- Phone screen content (Roger inside) reads as a polished modern phone capture — no AI uncanny tells in his face.
+- Phone bezel is anonymous-modern, neither Apple nor Samsung, just "a phone." Keeps the anachronism a paradox not product placement.
+- Mom's hand on the phone has natural skin tone and micro-tremor. Wedding ring visible if we have reference.
+- Background kids in water move with realistic physics. No floating limbs, no extra fingers, no melted faces.
+- Color grade: warm 1969 Kodachrome saturation but modern dynamic range. Sun is golden-hour, not flat noon.
+- Audio: surf has stereo width, kid laughter has mid-distance reverb, shutter click has a believable mechanical snap.
+- The pull-back camera move has organic ease-out, not robotic linear pull. Frame settles before the shutter clicks.
+- No watermark, no AI-tells in any frame. Cris must not be able to spot a single artifact.
+
+**If a layer doesn't pass the bar, we re-roll until it does. No "ship it, it's close enough" on this shot.**
+
+
+### MOM-AT-82 VOICE CAPTURE PLAN (May 9, when she visits)
+
+**Goal:** capture 60–90 seconds of her natural voice for eleven_multilingual_v2 voice cloning. Voice clone unlocks options across the entire film — open-shot voiceover, Act 1 bookends, possibly the dissolve transition into the closing shot.
+
+**Recording setup (have these ready when she arrives):**
+- iPhone Voice Memos (or any phone). Quiet room. No TV, no fan, no AC running.
+- Phone held ~6 inches from her mouth, NOT touching her chin.
+- Recording length: aim for 90+ seconds total across multiple takes.
+- File format: .m4a is fine (eleven accepts most). Filename: `mom_at_82_voice_<date>.m4a`.
+- Save to Cowork inbox or git so we have it Friday production hours.
+
+**Lines to capture (in this order, multiple takes each):**
+
+1. **Anchor lines (the iconic moments):**
+   - "He was my Number One Son."  ×3 takes, varied tone.
+   - "He was my only son."  ×3 takes.
+   - "He was my Number One Son. Ha ha ha. And my only son."  ×2 takes (the joke).
+
+2. **Orientation line:**
+   - "August nineteen sixty-nine. Russian River. Johnson's Beach."  ×2 takes.
+
+3. **Reflective free-form (60+ seconds total):**
+   - Ask her to talk freely about the day the photograph was taken, what she remembers, what kind of boy Roger was at 5, what she meant when she called him her Number One Son.
+   - This is the goldmine — natural cadence, breaths, laughter, her real way of speaking. The clone learns from this more than from scripted lines.
+   - Don't interrupt. Let her go.
+
+4. **Optional — if she's willing on camera (her face for archive, not for film):**
+   - 30 seconds of her looking at the actual 1969 photograph and saying anything that comes to mind.
+   - Phone landscape, soft window light, no ring light needed.
+   - This is BACKUP material — we likely won't use her face in the film (the AI-rendered 25-year-old version is the visual). But the audio is gold and the footage might unlock something we don't see yet.
+
+**What we get from this:**
+- A trained eleven voice clone that can deliver any line in her voice for the film.
+- The flexibility to choose between options (a/b/c) for the open shot audio at Friday huddle without committing now.
+- A real piece of her in the submission, even if it's "only" the voice. The recursion deepens: AI restores her younger self, but the voice giving meaning to the image is her actual voice today.
+
+**Time required from her:** 15–25 minutes total. Ideally relaxed, conversational, no pressure. Frame it as "tell me about that day" not "I need a recording for a competition."
+
+**Roger's notes:** keep it gentle, warm, like Sunday morning. The recording is a side-effect of a good visit, not the purpose of it.
