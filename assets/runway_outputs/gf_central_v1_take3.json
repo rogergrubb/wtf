@@ -1,0 +1,12 @@
+{
+  "task_id": "a3c1439c-5e07-4b4e-9226-1106bdfdfa89",
+  "model": "gen4.5",
+  "duration": 10,
+  "ratio": "1280:720",
+  "prompt_image": "https://raw.githubusercontent.com/rogergrubb/wtf/main/assets/photos/1969_mom25_roger5_LOCKED.png",
+  "iteration_note": "Take 3: aged Mom up to 35 (vs 25 in original photo) to push gen4.5 away from sister-rendering. Camera now pulls back and pans gently right (was: locked).",
+  "prompt_text": "The camera slowly pulls back and pans gently to the right as a 35-year-old mother and her 5-year-old son share a tender moment on a 1969 beach. The mother, with mature maternal warmth, smiles down at her son and pulls him closer to her shoulder. The boy nuzzles into her, breaks into a soft giggle. Wind moves their hair. Sunlight catches the rainbow umbrella behind them. [00:00] Close on cheek-to-shoulder. [00:02] Camera begins slow pull-back, gentle right pan. [00:04] Mother smiles down, pulls son closer. [00:06] Boy nuzzles in, soft giggle. [00:08] Camera settles on medium shot, both smiling warmly.",
+  "credits_spent": 120,
+  "credits_remaining_after": 50045,
+  "result_size_mb": 4.24
+}
