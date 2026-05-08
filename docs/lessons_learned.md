@@ -637,3 +637,105 @@ If we go Variant A, the pre-roll runs ~22-25s, total film at ~100-110s. More bre
 1. The film opens with Mom's voice over real photographs. This is the spine.
 2. The AUG 69 cropped photograph appears TWICE — at the end of the pre-roll AND at the bottom of the reverse-peel. Same image, two contexts.
 3. Real Roger's closing line is the only human voice in the film besides Mom's. Two voices. Two real people. Everything else is AI.
+
+
+### FINAL FILM STRUCTURE v3 — Product launch film, ~40s (Mastermind, May 8 dawn, third major pivot)
+
+**Mastermind authored a third structural pivot. This one supersedes both the cell-phone-reveal version (v1) and the reverse-engineering version (v2). It is now the locked submission structure.**
+
+**The new film is a PRODUCT LAUNCH FILM, not a brand film.** ~40 seconds. Ad for ghostframes.app. Hackathon rewards products that USE the API; this submission positions Ghost Frames as a real product the audience can use immediately.
+
+**The structure:**
+
+| Beat | Duration | What |
+|---|---|---|
+| 1. Photograph held in frame | 3s | Actual 1969 print. Mom + young Roger. Slightly faded. Static. |
+| 2. Music fades in | 2s | Sentimental, happy. The photograph begins to glow / activate. |
+| 3. Camera zooms IN, immerses inside the photograph | 3s | Pass through the print's surface into the moment. |
+| 4. Mom + Roger talking, environment alive | 22s | Mom-25 + Roger-5 share a real moment. Brief dialogue + beach environment + camera looks around. Children laughing. Water splashing. Wind. |
+| 5. Camera pulls back, freeze-frame on the photograph | 3s | The moment locks back into the still print. |
+| 6. Camera CONTINUES pulling back — reveal | 4s | The photograph turns out to be ONE of many. A wall/grid/constellation of faces — anyone someone could want to talk to. |
+| 7. Product pitch + caption | 4s | Voiceover: *"Anyone you've loved. Anyone you've lost. Anyone in recorded history."* Caption: **ghostframes.app — Have a conversation.** |
+| 8. End card | 3s | Number One Son Software Development. Powered by Runway. |
+| **TOTAL** | **~44s** | |
+
+**Dialogue inside the photograph (22 seconds, lots of silence):**
+
+> [Camera zooms in. Soft music. Surf + summer ambient.]
+> 
+> MOM (looking down, in her real cloned voice): *Hi, my Number One Son.*
+> ROGER (looking up, squinting): *Hi, Mom.*
+> 
+> [Beat. Camera looks around: kids splashing, umbrellas swaying, golden light.]
+> 
+> MOM: *You having fun?*
+> ROGER: *Yeah.* (giggles)
+> 
+> [Beat. She pulls him close.]
+> 
+> MOM: *I love you.*
+> ROGER: *Love you too.*
+> 
+> [Long beat. Mom looks down with quiet wonder. Roger beams up at her. Wind in their hair.]
+> 
+> [Camera pulls back. Moment freezes back into the photograph.]
+
+**Why v3 wins over v2:**
+
+1. **Product launch, not brand statement.** Hackathon rewards APIs being USED, not films talking about them. Ghost Frames is a real shippable product; the film advertises it.
+
+2. **Visual hook is photograph activating.** Static print → living moment → static print again. Carries the entire emotional payload in ~25s. No puzzles for the audience to solve.
+
+3. **Reveal is the product, not the founder.** Pulling back to a wall of "anyone you can talk to" makes the product surface visceral. Viewer's brain fills in their own loved one. They reach for their phone before the end card.
+
+4. **Production complexity drops 50%+.** v2 required 9 reverse-peel beats × separate renders + 4-layer composite for open shot. v3 needs ONE good 22-second scene + a wall-of-faces collage at the end.
+
+**Risk profile (v2 vs v3):**
+
+v2 spread risk across 9 separate gen4.5 generations. v3 concentrates risk on ONE technical bet: **does Mom-25 + Roger-5 talking inside the photograph render convincingly in Runway gen4.5 + character_performance?**
+
+Mitigation: **build that scene FIRST.** Saturday afternoon, before anything else, test Mom-25 + Roger-5 talking. If it lands, proceed with confidence. If it doesn't, fall back to a dialogue-free version (ambient sound only, lip-sync removed, environmental motion only — Mom and Roger present and silent, the moment alive without words).
+
+**What we keep from v1/v2 work:**
+
+- Cinematic prompt playbook (gen4.5 SHORT, gen4_aleph LONG bifurcation applies directly)
+- Open shot Layer 1 (background plate prompts) and Layer 4 (Mom-Roger scene prompts) are still relevant
+- Mom voice capture plan (May 9 visit) — voice clone is now the soundtrack of the central scene, even more critical
+- Mom-25 + Roger-5 Character creation from cropped AUG 69 photo — these are the leads
+- ghostframes.app domain decision — this is the URL on the end card
+- Conversational SaaS as the actual product
+- Modal infrastructure plan
+
+**What we drop or relocate:**
+
+- Cell phone over-the-shoulder reveal — DROPPED
+- Reverse-peel Act 2 nine beats — DROPPED (preserve as bonus content / behind-the-scenes for README)
+- Phone → Kodak transition — DROPPED
+- 20s pre-roll with 7 lifetime photos — DROPPED (single photograph anchors entire film)
+- "Cris, we're here for you. Let's talk." closing — RELOCATED to README closing or a separate tweet pinned to ghostframes.app launch. Not in the film.
+- 95-105s runtime → 40-45s runtime
+
+**Ethical guardrails for "anyone in recorded history" product line:**
+
+Marketing surface stays ambitious. Product reality has guardrails:
+- Living public figures: BLOCKED entirely in V1
+- Deceased public figures (Lincoln, Einstein, MLK, etc.): allowed with public-domain classification + watermark + responsible-use disclaimer
+- Personal photos (deceased loved ones): primary use case, requires consent affirmation gate before character creation
+- Fictional characters: allowed, fun, low risk
+
+Both true: marketing says "anyone in recorded history," product enforces these limits.
+
+**Connection to anyone.cafe (Mastermind's existing project):** Mastermind has a project called anyone.cafe that shares the conceptual DNA of this product. Ghost Frames may be the production-ready commercialization of that thinking. Worth exploring whether anyone.cafe and ghostframes.app are sibling brands, alternative URLs, or one absorbs the other.
+
+**Tasking impact:**
+
+- Tasks #49 (open shot), #50 (caption template), #51 (reverse-peel timeline), #52 (phone→Kodak), #59 (pre-roll photos), #60 (pre-roll script variant) — DEPRECATED. New task list reflects the v3 structure.
+- Task #46 (build Mom-25 + Roger-5 Characters) — UPGRADED to "build them PLUS make them talk to each other in a 22-second scene"
+- New task: build the 1969 photograph zoom-in / freeze-frame transition
+- New task: build the wall-of-faces reveal collage
+- New task: write product pitch voiceover (10 words: "Anyone you've loved. Anyone you've lost. Anyone in recorded history.")
+- New task: source sentimental happy music bed (or generate via eleven_text_to_sound_v2)
+- New task: design end card with ghostframes.app URL
+- All ghostframes.app SaaS build tasks remain (the product itself)
+
+**Mastermind authored this pivot. This is now the locked direction.**
