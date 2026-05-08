@@ -836,3 +836,18 @@ Step 4:
 ```
 
 **Why this matters for tasking:** Task #65 (spike Workflows access) now has a concrete checklist. The 30-minute spike specifically verifies (a) Workflows tab visible, (b) Publish button accessible, (c) App↔Dev account linkable on this plan. If all three are yes, we proceed. If the link step fails (account-tier locked), we fall back to Modal.
+
+
+### App ↔ Dev account LINKED (May 8, ~10am — kickoff over, build begins)
+
+Mastermind completed the App↔Dev account connection. The prerequisite is satisfied. Workflows can now be published as externally callable API endpoints.
+
+**Build window opens NOW.** Order of operations for the next 90 minutes:
+
+1. **Open Runway Workflows tab** in the App. Confirm visible.
+2. **Crop AUG 69 photo** to Mom-25 + Roger-5 only (sister out for consent). Save as `1969_mom_roger_cropped.png`. Upload to Runway as a reusable asset.
+3. **Build the character-sheet workflow:** Input image → Nano Banana Pro node → output 6 poses per character (front, back, three-quarter, close-up face, seated, standing). One workflow per character (Mom-25, Roger-5).
+4. **Run it. Test character consistency across all 6 generated poses.** This is the gate: if Nano Banana Pro produces consistent Mom-25 across all six poses, we proceed to dialogue scene workflow. If not, iterate prompts.
+5. **Lock the character refs.** Save URLs/asset IDs for both characters. They become inputs to the dialogue scene workflow.
+
+This is task #66 (now in_progress). Foundation for everything downstream.
