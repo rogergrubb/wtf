@@ -739,3 +739,23 @@ Both true: marketing says "anyone in recorded history," product enforces these l
 - All ghostframes.app SaaS build tasks remain (the product itself)
 
 **Mastermind authored this pivot. This is now the locked direction.**
+
+
+### Cris-ask deferred to post-assembly review (Mastermind, May 8 dawn)
+
+**Decision: the "Cris, we're here for you. Let's talk." closing line is no longer locked into the film. It's deferred until the v3 main body is assembled. Decision made when we can watch the actual cut and feel whether it lands.**
+
+Three ways the Cris-ask could exist in the final submission:
+- **(a) IN the film** — appears as a closing beat after the wall-of-faces reveal, before the end card
+- **(b) ON the GitHub README** — last line of the README, addressed to Cris specifically
+- **(c) IN a separate tweet pinned to ghostframes.app launch** — direct outreach without making the film carry it
+- **(d) NONE** — submission stands on the product alone, no founder-to-founder ask
+
+Mastermind defers the choice. Build the main body first; review; decide.
+
+This is the right discipline: optional emotional elements should be added LAST, after we feel what the locked elements are actually doing. Pre-committing to a closing line can lock the film into an emotional shape it doesn't earn.
+
+**Implications for production sequencing:**
+- Real Roger closing-shot recording (Saturday PM) becomes OPTIONAL until decision made.
+- If he records it as planned, we have the asset if we choose option (a). If we don't choose (a), the recording becomes raw material for option (c) or for v2 marketing content.
+- Recording it costs ~10 minutes of Roger's time and produces optionality. Recommendation: still record it. Decide later whether to use it.
