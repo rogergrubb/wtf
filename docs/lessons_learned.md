@@ -514,3 +514,25 @@ For each layer of the open shot composition, we iterate:
 **Time required from her:** 15–25 minutes total. Ideally relaxed, conversational, no pressure. Frame it as "tell me about that day" not "I need a recording for a competition."
 
 **Roger's notes:** keep it gentle, warm, like Sunday morning. The recording is a side-effect of a good visit, not the purpose of it.
+
+
+### Cinematic prompt research synthesis (May 8 dawn)
+
+Five sources researched in parallel: Curious Refuge, LTX Studio, Gabe Michael's Cinematic AI Prompt Method, Higgsfield Cinema Studio gallery, Runway official gen4.5 + gen4_aleph docs.
+
+**Top-line finding: Gabe Michael won Runway Gen:48 Best Art Direction TWICE.** Of all five sources, his methodology has the most direct alignment with Runway judges' tastes — they have already endorsed his style at the awards level. We weight his guidance highest where sources differ.
+
+**Universal pattern across all five:** Master Style Prompt (visual DNA established once) + Character reference sheets (front/side/back/close-up) + One camera move + One action + Director reference + Film stock specificity + Emotional anchor in plain language + 5-7 candidate iterations per layer.
+
+**Runway gen4.5 official formula (the spine):** *"The camera [motion] as the subject [action]. [Additional descriptions]."* Lead with motion. Positive phrasing only. Don't restate the input image. Strong action verbs. 150-300 token sweet spot.
+
+**Runway gen4_aleph official formula:** *"[Action verb] the video [so/to] [transformation]."* Aleph is for polish/transformation, not generation. Cheaper than gen4.5 (~5 cr/sec vs ~12 cr/sec). Use for unified color grade, film grain, relighting, atmospheric effects across multi-layer composites.
+
+**Two new canonical docs in repo:**
+- `docs/cinematic_prompt_playbook.md` — the unified anatomy + hard rules + Runway-specific notes + reusable template + iteration discipline (~1700 words)
+- `docs/open_shot_prompts.md` — Friday-ready prompts for all 4 layers of the keystone open shot + Aleph polish pass + audio overlay + quality bar checklist (~1500 words)
+
+**Master Style Prompt for the WTF brand film (lock):**
+> *"Cinematic, intimate, documentary realism. Warm 1969 Kodachrome color palette with modern dynamic range — golden saturation, faded shadows, soft highlights. Shot on ARRI Alexa with 35mm lens. Subtle film grain. Shallow depth of field. Natural light, golden hour. Quiet, observational, emotionally honest. Cinematography inspired by Terrence Malick and Roger Deakins."*
+
+This phrase gets pasted into every prompt for the entire film. Visual DNA, locked.
