@@ -329,3 +329,48 @@ Mastermind made the call: he has not gotten his sister's permission to use her i
 - Same logic that made me push back on using Cris's family photos applies inward to Roger's own family. Consent isn't a gate that only protects strangers.
 - The narrative actually gets *cleaner*: "Number One Son" is literally a two-person scene now — the woman who said the words, the boy who heard them. Tighter framing, stronger emotional read.
 - Submission rules (Section 7.3.2) and Runway's content moderation policies are upheld without ambigui
+
+### MAJOR STRUCTURAL PIVOT — "Reverse-engineer the magic" Act 2 (Mastermind, late May 7 / early May 8)
+
+**The new spine of the brand film: we OPEN on the finished AI-magic shot (Mom-25 + young-Roger conversing on Johnson's Beach, Russian River, 1969 — polished, color-graded, modern-feeling) and DECONSTRUCT it backward, peeling Runway tools one at a time, until only the original 1969 photograph remains. Then real Roger steps out of the dissolved system and delivers the closing line.**
+
+**Why this is the right structure:**
+- Tool inventory becomes story, not tech-demo. Every Runway endpoint earns its on-screen moment because removing it visibly degrades the magic. Cris counts the stack in real time without us narrating it.
+- Tool calling — the hottest agentic concept of 2026 — IS the narrative spine. The connective tissue gets its own peel beat where the LLM-orchestrator JSON flickers and dies.
+- We open on the most synthetic possible image and close on the most authentic possible image (real 62-year-old Roger). The journey from synthetic to authentic IS the deconstruction.
+- Inverts typical "AI demo" grammar. Demos build forward; this film unbuilds. Memorable in the judging room.
+- "Craftsman's blade" metaphor pays off: each peel = removing one sharpening pass. Blade gets rougher, until we are holding only the raw material the craftsman started with.
+
+**The peel sequence — Act 2 (~50s total, ~5–6s per beat):**
+
+| # | Tool removed | Visible effect |
+|---|---|---|
+| 0 | Open shot | Polished video. Mom + Roger laugh. She pulls him close. *"My Number One Son."* He giggles. |
+| 1 | gen4_aleph | Color grade flattens. Cinematic to home-video. |
+| 2 | character_performance (Act-Two) | Lip-sync stops. Mouths generic. |
+| 3 | eleven_text_to_sound_v2 | Ambient surf and wind drop. Dialogue only. |
+| 4 | eleven_multilingual_v2 voices | Voices silence. Mouths move mute. |
+| 5 | avatar_videos.create | Conversation collapses to two talking-head stills. |
+| 6 | avatars.create personalities | Knowledge and personality gone. Faces blank. |
+| 7 | gen4.5 image-to-video | All motion freezes. |
+| 8 | Tool-call orchestration (LLM glue) | On-screen tool-call JSON flickers, blue cursor blinks, dies. The agentic spine itself disappears. |
+| 9 | gen4_image upscale and restore | Resolution and color collapse to 1969 print quality. |
+| Final | — | The original photograph. Static. Faded. Silent. |
+
+**Cut to closing shot:** Real Roger, present day, looking at camera. *"Cris, we're here for you. Let's talk."*
+
+**Why this de-risks Friday production:**
+- Same asset stack we already plan to build. We just play it in reverse in the final composition.
+- Build forward (photo to polished video), then reverse the timeline in post and add the on-screen tool-removal captions. The ffmpeg `-vf reverse` pattern is already proven on Ghost Frames PoC.
+- Each peel beat needs an on-screen tool-name caption (lower-third, monospace, ~24pt). Caption design becomes a small Friday task.
+- The tool-call peel needs a brief JSON snippet visible. We have actual call payloads in `ghost_frames_submit.py` already — copy/paste from source.
+
+**The structural inversion sharpens the closing-shot payoff:**
+By the time real Roger appears, the audience has watched the entire AI apparatus dissolve. The contrast between "everything that just unwound" and "this one human, present-tense, 2026" is now maximal. The closing line lands harder than in the build-forward version.
+
+**Friday tasking impact:**
+- Task #46 (build 2 Characters) unchanged — still need Mom-25 + Roger-5.
+- New micro-task: build "the polished open shot" — single most important asset of the submission. Budget extra credits and extra Aleph passes here.
+- New micro-task: design the on-screen tool-removal caption template (PIL).
+- Task #29 (closing shot) unchanged — even more important now because the contrast is sharper.
+- Task #31 (explainer film) gets simpler — explainer can show the BUILD direction (forward) while the brand film shows the DECONSTRUCT direction (reverse). Two films, same assets, opposite arrows.
