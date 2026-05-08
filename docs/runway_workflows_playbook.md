@@ -22,6 +22,9 @@ A node-based visual pipeline builder inside the main Runway app. Launched Octobe
 
 URL pattern: `app.runwayml.com/video-tools/teams/[workspace]/ai-tools/workflows/[id]/edit`
 
+**Prerequisite (verified live May 8 kickoff):** App account and Dev account MUST be linked at **runwayml.com/building-tools** before published Workflows are callable via API. Without this link, Publish creates an internal asset only. Do this BEFORE any other Workflow work.
+
+
 Four node categories:
 
 | Category | Examples |
@@ -230,3 +233,22 @@ Iterate within the workflow until the scene lands flawlessly. Then export the fi
 - https://runwayml.com/changelog
 - https://github.com/runwayml/sdk-python
 - https://academy.runwayml.com/tutorial/how-to-build-custom-workflows
+
+
+---
+
+## ADDENDUM (May 8, 9:45am — confirmed from live kickoff)
+
+**The App↔Dev account link is the operational prerequisite.**
+
+Confirmed from a live Publish UI demo at the kickoff: before any published Workflow becomes callable via API, the user's App account (where Workflows are built) must be linked to their Dev account (where API keys are issued). The link is configured at **runwayml.com/building-tools**.
+
+Operational order:
+1. **runwayml.com/building-tools** → link App ↔ Dev accounts
+2. Build Workflow in App
+3. Toggle eye-icon on user-supplied inputs in the Publish UI
+4. Click Publish → Publish new endpoint
+5. Note the workflow_id from the resulting URL: `app.runwayml.com/video-tools/teams/{ws}/ai-tools/workflows/{workflow-id}/publish-endpoint`
+6. From client code: `client.workflows.create(workflow_id=..., inputs={...})`
+
+The "Set user inputs" UI explicitly states: *"Users will be able to use their own prompts in the input fields below. Hide the fields that don't need to be shown to users."* Confirms the runtime parameterization model that this playbook anticipated.

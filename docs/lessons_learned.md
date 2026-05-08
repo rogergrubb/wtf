@@ -799,3 +799,40 @@ Mastermind on the live Runway hackathon kickoff Zoom call shared screenshots of 
 - Sunday afternoon: Polish + brand film + README + submit.
 
 **The hackathon kickoff was the highest-value 30 minutes of the weekend.** Workflows changes the SaaS backend math by saving ~20 hours of orchestration code. Without this intel we would have built custom Modal pipelines from scratch.
+
+
+### Workflows Publish UI confirmed live — and the App↔Dev account link prerequisite (May 8, 9:45am)
+
+Mastermind captured the live "Publish new endpoint" UI from the kickoff call. Three details locked:
+
+**1. Runtime user inputs CONFIRMED.** The Publish UI displays a "Set user inputs" panel that says: *"Users will be able to use their own prompts in the input fields below. Hide the fields that don't need to be shown to users. Order of inputs here will reflect in the app view."* Each input has an eye-icon visibility toggle and an optional description field for the public-facing form. This means a Ghost Frames frontend can pass user photo + user story directly to the workflow at call time. Runtime parameterization is real.
+
+**2. Endpoint URL pattern verified.** `app.runwayml.com/video-tools/teams/{workspace}/ai-tools/workflows/{workflow-id}/publish-endpoint` matches what the research predicted. A unique workflow_id per published endpoint.
+
+**3. CRITICAL PREREQUISITE — App account ↔ Dev account link.** Mastermind captured presenter's exact line: *"scroll down... in the main page in settings, you'll see this developer account, and you can link from there. And then once that is linked..."* The link is set at **runwayml.com/building-tools**. Without it, Publish creates an internal asset but no externally callable endpoint. **This is the Friday-morning gotcha that costs hours if missed.**
+
+**Operational sequence locked:**
+
+```
+Step 1 (do this FIRST, before anything else):
+  → Go to runwayml.com/building-tools
+  → Link App account (where Workflows live) to Dev account (where API keys live)
+  → Verify the link in account settings
+
+Step 2:
+  → Build the Ghost Frames v1 Workflow in the App
+  → Toggle eye-icon visibility on the inputs that should be user-supplied
+    (photo, story, character description)
+  → Hide internal scaffolding nodes (system prompts, helper text)
+
+Step 3:
+  → Click Publish → Publish new endpoint
+  → Note the workflow_id from the resulting URL
+
+Step 4:
+  → From frontend (Next.js): call client.workflows.create(workflow_id=..., inputs={...})
+  → Poll task.wait_for_task_output(timeout=300)
+  → Display returned video URL to user
+```
+
+**Why this matters for tasking:** Task #65 (spike Workflows access) now has a concrete checklist. The 30-minute spike specifically verifies (a) Workflows tab visible, (b) Publish button accessible, (c) App↔Dev account linkable on this plan. If all three are yes, we proceed. If the link step fails (account-tier locked), we fall back to Modal.
