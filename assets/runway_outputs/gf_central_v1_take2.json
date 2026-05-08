@@ -1,0 +1,12 @@
+{
+  "task_id": "521d4570-6ef2-489a-81fa-373f479fe514",
+  "model": "gen4.5",
+  "duration": 10,
+  "ratio": "1280:720",
+  "prompt_image": "https://raw.githubusercontent.com/rogergrubb/wtf/main/assets/photos/1969_mom25_roger5_LOCKED.png",
+  "iteration_note": "Take 1 transformed Mom into a sister. Take 2 adds explicit relationship + age anchoring at front of prompt to keep her as a 25-year-old young mother.",
+  "prompt_text": "A 25-year-old young mother holds her 5-year-old son close to her left shoulder. The mother turns her head toward her son, smiles with quiet maternal warmth, and pulls him closer. The boy nuzzles into her shoulder, his face brightening into a soft giggle. Locked camera, soft river breeze. [00:00] Both still, cheek to shoulder. [00:02] Mother turns her head toward son. [00:04] She pulls him closer with a warm smile. [00:06] Boy nuzzles in, breaks into giggle. [00:08] Both settle, intimate moment.",
+  "credits_spent": 120,
+  "credits_remaining_after": 50165,
+  "result_size_mb": 3.44
+}
