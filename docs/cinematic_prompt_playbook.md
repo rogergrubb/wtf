@@ -186,3 +186,112 @@ For our open shot, we stay 100% in Runway. The layers we build are all things ge
 - **Gabe Michael's Cinematic AI Prompt Method** — creativepossible.substack.com (Master Style Prompt, 5W+H, Runway Gen:48 winner workflow)
 - **Higgsfield** — higgsfield.ai (Cinema Studio gallery, multi-shot storyboard prompts, model-specific differences)
 - **Runway official** — help.runwayml.com (gen4.5 + gen4_aleph official prompting guides)
+
+
+---
+
+# v2 UPDATE — Insights from ChatGPT triangulation (May 8, 2026)
+
+ChatGPT's deep-dive (raw response saved at `docs/chatgpt_response_raw.md`) added five load-bearing refinements. These OVERRIDE the corresponding sections of v1 where they conflict.
+
+## Critical refinement: bifurcate prompt length by tool
+
+**This changes how we write every prompt.**
+
+The v1 Master Style Prompt approach (paste full visual DNA into every prompt) is wrong for gen4.5 specifically. Runway's official guidance says image-to-video prompts that restate the input image in high detail REDUCE motion quality. The model treats both image AND text as the prompt; describing what's already in the image steals tokens from describing motion.
+
+**Updated rule:**
+- **gen4.5 prompts:** SHORT (40-80 tokens), motion-first, positive phrasing only. Do NOT paste the Master Style Prompt. Do NOT describe what's in the image. Describe ONLY what changes over time.
+- **gen4_aleph prompts:** LONG (150-300 tokens), description-rich, full transformation language. Paste the Master Style Prompt here. Aleph is where the visual DNA gets enforced.
+- **gen4_image prompts (text-to-image):** MEDIUM (80-150 tokens), description-rich because the image IS what we're describing. Paste the Master Style Prompt here.
+
+## Critical insight: environmental motion is safer than human motion
+
+ChatGPT's exact words: *"Environmental motion is safer than complex human motion. Wind, rain, smoke, fog, dust, reflections, and light movement usually generate better cinematic results."*
+
+**Strategic implication for the open shot:**
+- Layer 1 (kids splashing in water) = environmental motion = high success rate. Iterate 3-5 takes.
+- Layer 4 (Mom over-the-shoulder holding phone) = complex human motion = HARDEST. Iterate 7-10 takes AND pose her STILL with environment moving around her.
+
+**Updated Layer 4 strategy:** Mom does not move. The world moves around her — wind in her hair, kids splashing in soft-focus background, sunlight micro-shifting on her shoulder. The phone has subtle hand-held micro-tremor. That's it. We are prompting environmental motion around a still subject, not animating a complex human pose.
+
+## The 2026 shift framing
+
+> "Prompt motion, not image quality. Static image prompts describe what something looks like. Video prompts must describe what changes over time."
+
+This becomes a sanity check on every gen4.5 prompt before we run it: does the prompt describe CHANGE OVER TIME, or does it describe the LOOK of the frame?
+
+If it describes the look, rewrite it.
+
+## Action beats with explicit counts
+
+Augmenting our v1 timing markers ([00:01], [00:03]) with explicit beat counts:
+
+> "She takes four steps, pauses, then turns her head in the final second."
+
+This is more precise than timestamps alone because it ties beats to specific physical actions. Use both: timestamps for camera, beat counts for subject motion.
+
+## Style-first placement
+
+Our v1 says paste the master style prompt at the end. ChatGPT says LEAD with the style:
+
+> "1970s handheld documentary footage of..." beats "A man walks into a room. Make it look like a 1970s documentary."
+
+For gen4_aleph and gen4_image prompts, the master style prompt now goes FIRST (or its summary form does). For gen4.5, we don't paste it at all, so this rule doesn't apply there.
+
+## Updated reusable templates
+
+### gen4.5 motion prompt template (SHORT — 40-80 tokens)
+
+```
+[Subject in general terms — "the subject", "the woman", "the boy"] [strong verb 1], [strong verb 2], [optional verb 3].
+The camera [single specific movement].
+[Single environmental motion detail].
+[00:01] [first beat]. [00:03] [second beat]. [00:05] [final beat].
+```
+
+### gen4_aleph polish prompt template (LONG — 150-300 tokens)
+
+```
+[Master Style Prompt pasted in full — visual DNA].
+Apply [transformation 1], [transformation 2], [transformation 3].
+Re-light [specific lighting direction].
+Add [film grain / atmospheric effect / dust particles / lens flare].
+Preserve [camera moves / subject performance / character likeness].
+[Reference image instruction if applicable: "using the lighting from the reference image"].
+```
+
+### gen4_image still-frame prompt template (MEDIUM — 80-150 tokens)
+
+```
+[Master Style Prompt — full or summarized].
+A [shot type] of [specific subject in 3-5 visual details] in [specific location].
+[Lighting source + direction + quality].
+Palette: [3-5 color anchors].
+[Lens feel + depth of field].
+Constraints: [positive constraints, no ambiguity].
+```
+
+## ChatGPT's master 11-slot scene breakdown (use as a pre-prompt brief)
+
+Before writing any prompt, fill in these 11 slots first. Then convert to the appropriate template above.
+
+```
+1. Scene purpose: [emotional or commercial intent]
+2. Shot: [wide / medium / close-up / macro / aerial / tracking / locked]
+3. Subject: [focal point with 2-4 specific visual details]
+4. Action: [one simple action in 2-3 physical beats]
+5. Camera: [ONE camera movement only]
+6. Location: [specific place with visible environmental details]
+7. Lighting: [main light source, direction, quality, contrast]
+8. Palette: [3-5 color anchors]
+9. Texture: [35mm, 16mm, clean commercial, documentary, noir, etc.]
+10. Audio: [diegetic sound, ambience, dialogue if needed]
+11. Constraints: [no logos, no readable text, no extra characters, realistic motion, etc.]
+```
+
+## What ChatGPT did NOT contribute (so we keep these from v1)
+
+- Gabe Michael 2x Gen:48 winner — still our highest-weighted source where alignments differ
+- Master Style Prompt as a formalized project-wide discipline — keep, but apply only to Aleph and gen4_image, not to gen4.5
+- Cross-model fallback matrix — still useful Friday insurance

@@ -231,3 +231,97 @@ The shot does not ship until each line is true.
 - [ ] Frame settles before the shutter clicks.
 - [ ] Watermark check: no Runway/Aleph/etc. visible artifacts.
 - [ ] Real Roger watches the final and clears it himself.
+
+
+---
+
+# v2 UPDATE — Refined per ChatGPT triangulation (May 8, 2026)
+
+After ChatGPT triangulation surfaced that Runway gen4.5 punishes long prompts that restate the input image, the gen4.5 motion prompts below SUPERSEDE the v1 versions for those specific layers. The gen4_image still-frame prompts and gen4_aleph polish prompt remain unchanged — those tools reward longer description.
+
+## Layer 1 — REVISED gen4.5 motion prompt (SHORT, motion-first)
+
+After the gen4_image winning still is selected, run this SHORT motion prompt on it:
+
+```
+The children mid-frame begin a fresh splash, droplets rising and 
+catching golden light. The camera glides slowly to the right in a 
+soft handheld pan. Beach umbrellas shift gently in summer breeze. 
+[00:00] Splash begins. [00:02] Droplets at peak height. [00:04] 
+Droplets land, pan settles. [00:05] Children turn back toward water.
+```
+
+Token count: ~55. Pure motion description. Master Style Prompt NOT pasted.
+
+## Layer 4 — REVISED strategy: Mom is STILL, world moves around her
+
+ChatGPT explicit guidance: environmental motion is safer than complex human motion. Mom over-the-shoulder is the hardest layer. The pose stays still; everything around her moves.
+
+### Updated avatars.create personality prompt (unchanged from v1)
+
+Keep as-is. Personality grounding is not affected by motion-prompt rules.
+
+### REVISED avatar_videos.create motion prompts (generate 5 takes, all environment-first)
+
+**Take 1 — wind + breath**
+
+```
+The subject holds steady, framing the shot. Her hair shifts in soft 
+river breeze. Slow controlled inhale lifts her shoulders one millimeter. 
+The camera holds locked over her left shoulder. [00:00] Steady. 
+[00:02] Hair lifts. [00:04] Breath in. [00:05] Settled.
+```
+
+**Take 2 — shutter tap with environmental settle**
+
+```
+The subject holds the phone steady. At three seconds her right thumb 
+taps the shutter and retracts. Wind moves her hair throughout. Camera 
+locked. [00:00] Steady. [00:02] Thumb drift. [00:03] Tap. [00:04] 
+Thumb retracts. [00:05] Settled, hair still moving.
+```
+
+**Take 3 — sunlight micro-shift**
+
+```
+The subject holds still. Golden afternoon sunlight micro-shifts across 
+her shoulder and the phone's metallic edge. Camera locked over her 
+left shoulder. Hair shifts gently in breeze. [00:00] Light steady. 
+[00:02] Light begins shift. [00:05] Light settles warmer.
+```
+
+**Take 4 — background bokeh activates**
+
+```
+The subject holds steady. Behind her shoulder in soft focus, children 
+splash in shallow water. Bokeh sparkles activate at three seconds. 
+Camera locked. [00:00] Steady. [00:02] Background motion begins. 
+[00:03] Bokeh sparkles peak. [00:05] Settle.
+```
+
+**Take 5 — micro-tremor on phone**
+
+```
+The subject holds the phone in steady grip with subtle hand micro-tremor. 
+Wind in her hair. Camera locked over her left shoulder. [00:00] 
+Steady. [00:02] Slight tremor. [00:04] Settles. [00:05] Steady again.
+```
+
+### Why this rewrite is stronger
+
+- Mom is rendered as STILL POSE = high success rate.
+- Environmental motion (hair, sunlight, bokeh, background splash) = ChatGPT's confirmed high-success category.
+- Each take isolates ONE environmental motion variable for clean A/B comparison.
+- Token count ~40-60 per prompt. Master Style Prompt NOT pasted. The image is the master style.
+
+## Updated iteration loop for the open shot
+
+For each layer, in order:
+1. **gen4_image (still frame):** 3-5 candidates with FULL master style prompt + description.
+2. **A/B select winning still.**
+3. **gen4.5 (motion):** 5-7 candidates with SHORT motion-only prompts on the winning still. Master Style Prompt NOT included.
+4. **A/B select winning clip.**
+5. **gen4_aleph (polish):** 1-3 passes with FULL master style prompt + transformation language on the composite of all 4 layers.
+6. **A/B compare polished vs raw composite.** Lock the strongest.
+
+This is the correct workflow per Runway's own guidance, not an opinion.

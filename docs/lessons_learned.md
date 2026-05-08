@@ -536,3 +536,28 @@ Five sources researched in parallel: Curious Refuge, LTX Studio, Gabe Michael's 
 > *"Cinematic, intimate, documentary realism. Warm 1969 Kodachrome color palette with modern dynamic range — golden saturation, faded shadows, soft highlights. Shot on ARRI Alexa with 35mm lens. Subtle film grain. Shallow depth of field. Natural light, golden hour. Quiet, observational, emotionally honest. Cinematography inspired by Terrence Malick and Roger Deakins."*
 
 This phrase gets pasted into every prompt for the entire film. Visual DNA, locked.
+
+
+### ChatGPT triangulation synthesis (May 8 dawn)
+
+Mastermind drove ChatGPT directly via Claude side-panel. Full raw response saved at `docs/chatgpt_response_raw.md`. ChatGPT confirmed and EXTENDED the cinematic prompt research.
+
+**Single biggest refinement: bifurcate prompt length by tool.**
+
+Runway gen4.5 punishes long prompts that restate the input image. We were over-prompting. The corrected workflow:
+- gen4.5: SHORT (40-80 tokens), motion-first, no Master Style Prompt
+- gen4_aleph: LONG (150-300 tokens), Master Style Prompt FIRST
+- gen4_image: MEDIUM (80-150 tokens), Master Style Prompt included
+
+**Strategic insight: environmental motion is safer than human motion.** Layer 4 (Mom over-the-shoulder) gets revised to STILL-POSE-WITH-MOTION-AROUND-HER strategy. Mom does not move; her hair shifts, sunlight micro-shifts, background kids splash in soft focus, hand has micro-tremor. Five revised takes documented in `docs/open_shot_prompts.md` v2.
+
+**2026 shift framing:** prompt motion, not image quality. Sanity check before any gen4.5 prompt: does this describe CHANGE OVER TIME, or the LOOK of the frame? If the latter, rewrite.
+
+**Style-first placement:** for gen4_aleph and gen4_image, lead with style. For gen4.5, no style prompt at all (the image carries the style).
+
+**Action beats with explicit counts** augment our v1 timestamps. Example: "She takes four steps, pauses, then turns her head in the final second."
+
+Two new repo docs:
+- `docs/cinematic_prompt_playbook.md` — v2 update section appended at bottom (overrides v1 where conflicting)
+- `docs/open_shot_prompts.md` — v2 update section with revised Layer 1 + Layer 4 prompts
+- `docs/chatgpt_response_raw.md` — raw research input preserved for archive
