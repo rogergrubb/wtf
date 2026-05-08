@@ -374,3 +374,53 @@ By the time real Roger appears, the audience has watched the entire AI apparatus
 - New micro-task: design the on-screen tool-removal caption template (PIL).
 - Task #29 (closing shot) unchanged — even more important now because the contrast is sharper.
 - Task #31 (explainer film) gets simpler — explainer can show the BUILD direction (forward) while the brand film shows the DECONSTRUCT direction (reverse). Two films, same assets, opposite arrows.
+
+
+### THE OPEN SHOT — over-the-shoulder cell phone reveal (Mastermind, May 8 dawn)
+
+**The opening 5–7 seconds of the brand film, locked:**
+
+Frame 1: Close-up. Young Roger on the beach, smiling. Looks like a polished, modern, phone-captured video. Wind in his hair. He's in his white shirt from the AUG 69 photo, standing in front of the Russian River.
+
+Frame 2 (1.5s in): Camera begins pulling back. We become aware of a thin black bezel framing what we're seeing.
+
+Frame 3 (3s in): The audience realizes — *we are looking at a cell phone screen.*
+
+Frame 4 (4s in): Pull-back continues. Mom's shoulder enters the right side of the frame. Her arm. The phone is in her hand. We are watching over her shoulder.
+
+Frame 5 (5–6s in): Full reveal. Mom (back to camera, custom Character built from cropped AUG 69 photo) is holding her phone, framing Roger. Behind Roger: kids playing in the water, ambient summer life. Sound: surf, laughter, soft shutter click as she taps the screen.
+
+**Why this open is decisive:**
+
+1. **The phone is the AI tell.** A cell phone in 1969 is impossible. Audience clocks the anachronism within 3 seconds. They are now in on the film's premise — *AI restoring a moment that almost was* — without us narrating a single word.
+
+2. **Mom's face is withheld.** We see her shoulder, her arm, her hand. Not her face. That becomes the payoff later (Act 2 peels reveal it; closing shot pays it off when real Roger appears).
+
+3. **Cinematic reveal grammar.** Pull-back-to-reveal is canonical film language. Cris recognizes it instantly. Signals craft.
+
+4. **The cell phone IS the recursion.** Every Runway tool we use is, metaphorically, what would have lived inside that phone in 2026. The phone is the visible container of all the AI we deploy. When Act 2 peels the tools away, the LAST peel is the phone itself — it dissolves out of mom's hand and is replaced by a 1969 Kodak Instamatic. The screen darkens. The camera moves IN, not OUT. We are left holding only the original print.
+
+5. **Background life.** Kids splashing in the water adds depth, ambient sound, and the "people who were there but never made it into the original photograph" emotional layer. It restores the day, not just the subject.
+
+**Production composition (Friday):**
+
+- Layer 1 (foreground): polished avatar_videos.create render of young-Roger Character, ~7s clip, beach background, smiling with subtle motion. This is what plays inside the phone screen.
+- Layer 2 (mid): phone bezel + screen frame compositing. Static asset (PIL or single gen4_image of a 2026 iPhone in landscape orientation, screen masked transparent).
+- Layer 3 (mid-back): Mom's shoulder + arm + hand holding phone. Either custom Character render in over-the-shoulder pose OR a single composited frame with subtle hand-tremor motion via gen4.5.
+- Layer 4 (background): kids playing in water — gen4_image generated plate ("1960s children splashing at Russian River, golden hour, soft focus") + gen4.5 for ambient motion.
+- Camera move: pull-back simulated via ffmpeg scale-and-pan keyframes, OR via gen4_aleph cinematic pass with explicit "pull back to reveal" prompt.
+- Audio: eleven_text_to_sound_v2 for surf + ambient summer + distant kid laughter; single shutter-click SFX when she taps screen at 5s mark.
+
+**Tooling stacked into the open shot (so the deconstruction in Act 2 is rich):**
+gen4_image (background plate) → gen4_image (phone bezel) → avatars.create (Roger-5 Character) → avatars.create (Mom-25 Character) → avatar_videos.create (Roger inside the phone) → avatar_videos.create (Mom holding phone) → eleven_text_to_sound_v2 (surf + kids + shutter) → gen4_aleph (cinematic color grade + camera-move polish). **Eight Runway endpoints in the first 7 seconds.** Every one of them gets peeled in Act 2.
+
+**The phone as the master metaphor:**
+The cell phone is what we build the film around. It enters in shot 1. It is the LAST tool peeled in Act 2 (replaced by the 1969 Kodak). It's how the audience understands "this is what AI did." When the phone goes away, the AI goes away. When the AI goes away, we are alone with the photograph. When we are alone with the photograph, real Roger steps out and addresses Cris.
+
+**Open question to resolve before Friday production:**
+Mom's voice during the open shot. Three options:
+- (a) No dialogue — only ambient sound, shutter click. Her line "My Number One Son" lands later in Act 1.
+- (b) Diegetic dialogue — she says it as she snaps the photo, lip-sync via character_performance from her over-the-shoulder angle (hard).
+- (c) **Voiceover from present-day Mom** — clone of his actual mother (alive at 82) via eleven_multilingual_v2 + voice cloning, saying *"He was my Number One Son."* The visual is 1969 but the voice is 2026 — narrating from the future, looking at the moment as it was. Recursion compounds.
+
+Option (c) is the strongest narratively but most expensive emotionally and credit-wise. Decision deferred to Friday morning huddle.
