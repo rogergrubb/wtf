@@ -561,3 +561,79 @@ Two new repo docs:
 - `docs/cinematic_prompt_playbook.md` — v2 update section appended at bottom (overrides v1 where conflicting)
 - `docs/open_shot_prompts.md` — v2 update section with revised Layer 1 + Layer 4 prompts
 - `docs/chatgpt_response_raw.md` — raw research input preserved for archive
+
+
+### FINAL FILM STRUCTURE LOCKED — 95-105s with 20s emotional pre-roll (Mastermind, May 8 dawn)
+
+**Total runtime target: 95-105 seconds (~1:35-1:45).**
+
+The maximalist version. We keep the lifetime photo bookends from the original treatment, but front-load them as a 20-second emotional pre-roll BEFORE the AI sequence begins. This creates a circular narrative — the film starts and ends on the same 1969 photograph, but the meaning has changed.
+
+| Beat | Duration | What |
+|---|---|---|
+| **Pre-roll — Mom's voice over real photos** | ~20s | Mom-at-82 voice clone narrating over 5-7 real Roger photographs. Final image = AUG 69 photo (cropped to Mom + Roger). Voice plants "Number One Son" emotional anchor. |
+| **Open shot — polished max-AI cell phone reveal** | 6-7s | The keystone. Audience clocks the cell phone in 1969 anachronism. AI premise established without a word of narration. |
+| **Reverse-peel sequence (9 beats × ~5s)** | ~45s | Tools peel off one at a time. gen4_aleph → character_performance → eleven_text_to_sound_v2 → eleven_multilingual_v2 → avatar_videos.create → avatars.create → gen4.5 → tool-call orchestration → gen4_image. Each beat carries an on-screen tool-name caption. |
+| **Final peel — phone dissolves to 1969 Kodak Instamatic** | ~3s | Visual thesis closes. Tool layer becomes physical camera. |
+| **Hold on original photograph** | ~3s | Faded, silent. Same photograph that ended the pre-roll. The circle closes. |
+| **Hard cut to real Roger 2026** | ~6s | "Cris, we're here for you. Let's talk." Two beats of silence after. |
+| **End card** | ~4s | Number One Son. Powered by Runway. Builders Program. |
+| **TOTAL** | **~87-92s** | Plus ~8-13s breathing room across beats = 95-105s real runtime |
+
+**Why this structure wins:**
+
+1. **Circular narrative.** The film starts and ends on the same 1969 photograph. The audience has been TOLD what this image means (Mom's voice). They watch AI add layers to it. They watch AI subtract those layers. They land back on the same image — but now it carries the weight of everything that happened in between. Real Roger walks out of that meaning.
+
+2. **Emotional weight is front-loaded.** Pre-roll establishes the human stakes before any AI magic. By the time the open shot lands at 0:20, the audience is already invested. The cell phone anachronism becomes a payoff for caring about Mom and Roger, not a parlor trick.
+
+3. **Reverse-peel earns its 50 seconds.** Without emotional setup, 50 seconds of tool deconstruction is a tech demo. With the pre-roll, it's the audience watching what AI did to a moment they already feel for. Tool transparency becomes story, not narration.
+
+4. **The closing shot lands harder.** Real Roger appears not just after the AI dissolves, but after the audience has watched the AI build AND un-build a moment from a photograph they were emotionally introduced to in the pre-roll. The contrast is now triple-layered: real photo → AI fantasy → reality of present-day Roger.
+
+**Pre-roll asset requirements (NEW):**
+
+- 5-7 real Roger photographs spanning ~60 years. Existing photos in `assets/photos/` already cover most of this.
+- Mom-at-82 voice clone delivering ~50-60 words over the sequence.
+- Each photo gets ~3-4 seconds of screen time.
+- Final photo of the pre-roll = AUG 69 (Mom + Roger, cropped). This handoff frame becomes the still that the open shot animates.
+
+**Pre-roll script (DRAFT — Friday huddle decision required):**
+
+Two candidate scripts to test against Mom-at-82 voice clone:
+
+**Variant A — longer, more reflective (~55 words, ~22 seconds):**
+
+> "This is my Roger. Number One Son.  
+> He was five years old when I called him that the first time.  
+> That photograph there — the one on the beach at the river — that was the day.  
+> Now look at him.  
+> Look at all he's done.  
+> He still calls me every Sunday.  
+> He's still my Number One Son."
+
+**Variant B — tighter, more poetic (~25 words, ~10 seconds):**
+
+> "He was five.  
+> I called him my Number One Son.  
+> He took it to heart.  
+> Sixty years later — he still does."
+
+If we go Variant B, the pre-roll runs ~12-15 seconds with the photos cycling, and total film lands at ~85-90s. Cleaner but emotionally tighter.
+
+If we go Variant A, the pre-roll runs ~22-25s, total film at ~100-110s. More breathing room, more emotional saturation.
+
+**Mastermind decision Friday morning** after listening to Mom-at-82 voice clone and feeling which length lands.
+
+**Tasking impact:**
+
+- **Task #53 (Mom voice capture) elevated to CRITICAL.** Without her voice, the pre-roll structure does not work. Saturday recording session is the single highest-priority asset capture before Friday production.
+- **Task #54 (eleven voice clone training) similarly elevated.**
+- **Task #33 (restore Mastermind's photos via Runway tools) takes on new shape.** The 5-7 photos for the pre-roll need gen4_image restoration passes for visual consistency. This becomes Friday morning's first build task — done in parallel with avatar character creation.
+- **NEW micro-task:** select final 5-7 photos for pre-roll, lock order, lock per-photo duration to match chosen voice variant.
+- **NEW micro-task:** decide between Variant A vs Variant B pre-roll script after listening to voice clone.
+
+**The structural lock means three things have just become immovable:**
+
+1. The film opens with Mom's voice over real photographs. This is the spine.
+2. The AUG 69 cropped photograph appears TWICE — at the end of the pre-roll AND at the bottom of the reverse-peel. Same image, two contexts.
+3. Real Roger's closing line is the only human voice in the film besides Mom's. Two voices. Two real people. Everything else is AI.
